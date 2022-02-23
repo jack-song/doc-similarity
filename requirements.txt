@@ -3,3 +3,11 @@ scikit-learn~=0.22
 gensim~=3.8
 nltk~=3.4
 jupyterlab
+obsidiantools  # lib
+markdown
+html2text
+pandas
+numpy
+networkx
+matplotlib  # for demo
+scipy  # for demo
