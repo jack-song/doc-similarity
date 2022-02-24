@@ -5,7 +5,9 @@ Why do we weighted Tfidf with glove?
 We use 2 versions of tfidf currently - the scikit learn version and the gensim version. Why? Not not just use the gensim tfidf?
 
 - add tfidf scores
-- Ignore existing links and shared tags
+- label existing links and shared tags
+- easier to read output
+- ignore list for output
 - add USE +
 - do combined ranking
 - figure how to handle tags

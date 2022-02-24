@@ -355,8 +355,7 @@ class DocSim:
         else:
             raise NotReadyError("Word embedding model is not ready.")
 
-    def top_pairs(self, keyToDoc: dict):
-        TOP_N = 20
+    def top_pairs(self, keyToDoc: dict, topN: int):
         names, documents = [list(x) for x in zip(*keyToDoc.items())]
 
         if self.model_ready:
@@ -394,7 +393,7 @@ class DocSim:
                 # Top scores for this subset.
                 sorted_top_scores = sorted(
                     enumerate(similarities), reverse=True, key=lambda x: x[1]
-                )[:TOP_N]
+                )[:topN]
                 # Do not record self matches or flipped duplicates.
                 matches = [
                     (first_idx, other_idx, score)
@@ -406,7 +405,7 @@ class DocSim:
             # Return highest scoring matches globally.
             top_index_matches = sorted(
                 global_top_scores, reverse=True, key=lambda x: x[2]
-            )[:TOP_N]
+            )[:topN]
 
             # Return the OG keys
             return [

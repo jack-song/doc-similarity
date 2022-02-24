@@ -76,8 +76,7 @@ def rank_documents(search_terms: str, documents: list):
     return document_scores
 
 
-def top_pairs(keyToDoc: dict):
-    TOP_N = 20
+def top_pairs(keyToDoc: dict, topN):
     names, documents = [list(x) for x in zip(*keyToDoc.items())]
 
     vectors = vectorizer.fit_transform(documents)
@@ -96,7 +95,7 @@ def top_pairs(keyToDoc: dict):
         # Top scores for this subset.
         sorted_top_scores = sorted(
             enumerate(document_scores), reverse=True, key=lambda x: x[1]
-        )[:TOP_N]
+        )[:topN]
 
         matches = [
             (first_idx, other_idx + offset, score)
@@ -106,7 +105,7 @@ def top_pairs(keyToDoc: dict):
 
     # Return highest scoring matches globally.
     top_index_matches = sorted(global_top_scores, reverse=True, key=lambda x: x[2])[
-        :TOP_N
+        :topN
     ]
 
     # Return the OG keys
