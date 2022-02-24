@@ -5,10 +5,11 @@ Why do we weighted Tfidf with glove?
 We use 2 versions of tfidf currently - the scikit learn version and the gensim version. Why? Not not just use the gensim tfidf?
 
 - add tfidf scores
-- Ignore existing links
-- add USE
+- Ignore existing links and shared tags
+- add USE +
 - do combined ranking
-- connect to obsidian
+- figure how to handle tags
+- connect to obsidian and add light randomization
 - add keyword weighting
 - clean up real documents
 - pull more example graphs
