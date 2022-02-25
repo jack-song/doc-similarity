@@ -11,3 +11,5 @@ numpy
 networkx
 matplotlib  # for demo
 scipy  # for demo
+tensorflow==2.8.0
+tensorflow_hub

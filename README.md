@@ -12,13 +12,17 @@ We use 2 versions of tfidf currently - the scikit learn version and the gensim v
 - do combined ranking
 - figure how to handle tags
 - connect to obsidian and add light randomization
+- pairing ignores
+- document ignores
 - add keyword weighting
 - clean up real documents
 - pull more example graphs
 - try training and learning
 - add topological features
 - try deep learning
-- add sequence features?
+- add link sequence features?
+- and viewing pattern features?
+- pull in online information features?
 
 https://groups.google.com/g/gensim/c/8wCZp4Ievk4?pli=1
 "You can combine similarity matrices by (weighted) averaging:
